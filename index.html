@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indhira M | Artificial Intelligence & Machine Learning Student</title>
+    <meta name="description" content="Portfolio of Indhira M, pursuing B.Sc. Artificial Intelligence and Machine Learning at Dr. N.G.P. Arts and Science College. Explore my projects, skills, and achievements.">
+    
+    <!-- Open Graph Tags for Social & Link Previews -->
+    <meta property="og:title" content="Indhira M - AI & ML Portfolio">
+    <meta property="og:description" content="Explore projects, certifications, and academic achievements of Indhira M.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/indhira-9">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #faf9f6;
+            --surface-color: #ffffff;
+            --text-primary: #1c1c1e;
+            --text-secondary: #5a5a5e;
+            --accent-color: #0d5c3d;
+            --accent-light: #e6f4ed;
+            --border-color: #e2e2e6;
+            --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            --transition: all 0.25s ease;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #121214;
+            --surface-color: #1a1a1e;
+            --text-primary: #f4f4f6;
+            --text-secondary: #a0a0a5;
+            --accent-color: #2ea06c;
+            --accent-light: #15291f;
+            --border-color: #2c2c32;
+            --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 0 1rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .logo-initials {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 1.25rem;
+            background: var(--accent-light);
+            color: var(--accent-color);
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .nav-controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .theme-toggle {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.875rem;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent-color);
+        }
+
+        section {
+            margin-bottom: 5rem;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.25rem;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .hero {
+            text-align: left;
+            padding-top: 1rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .role {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .hero .bio-line {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background-color: var(--surface-color);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .about-content {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .about-content p {
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .about-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .skill-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background-color: var(--bg-color);
+            color: var(--text-secondary);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .projects-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .project-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-meta {
+            font-size: 0.875rem;
+            color: var(--accent-color);
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .project-details {
+            margin-bottom: 1.25rem;
+        }
+
+        .project-details dt {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            margin-top: 0.75rem;
+        }
+
+        .project-details dd {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-left: 0;
+        }
+
+        .project-link {
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            text-decoration: none;
+            margin-top: 0.5rem;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .edu-cert-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .edu-cert-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .list-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .list-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+        }
+
+        .list-card ul {
+            list-style-type: none;
+        }
+
+        .list-card li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.85rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .list-card li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .list-card li strong {
+            color: var(--text-primary);
+        }
+
+        .contact-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .contact-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.5rem 0.75rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <a href="#" class="logo-initials">IM</a>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">Dark Mode</button>
+            </div>
+        </nav>
+
+        <header class="hero" id="hero">
+            <h1>Indhira M</h1>
+            <div class="role">AI & ML Student</div>
+            <p class="bio-line">Motivated and adaptable individual pursuing Artificial Intelligence and Machine Learning, seeking to apply analytical skills and build real-world intelligent systems.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact</a>
+                <a href="https://github.com/indhira-9" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub Profile</a>
+            </div>
+        </header>
+
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>I am currently pursuing my Bachelor of Science in Artificial Intelligence and Machine Learning at Dr. N.G.P. Arts and Science College, Coimbatore, maintaining a strong academic record with a CGPA of 8.58.</p>
+                    <p>My core academic focus covers Python programming, data analytics, foundational machine learning algorithms, and practical problem-solving.</p>
+                    <p>I enjoy working on structured technical applications, hackathon challenges, and expanding my domain knowledge through continuous learning and research publications.</p>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>Technical & Soft Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Programming Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">C++</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Databases & Queries</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Database Creation</span>
+                            <span class="skill-tag">Querying</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Machine Learning Basics</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">Linear Regression</span>
+                            <span class="skill-tag">Data Preprocessing</span>
+                            <span class="skill-tag">Performance Forecasting</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Analytical & Soft Skills</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">Logical Reasoning</span>
+                            <span class="skill-tag">Data Interpretation</span>
+                            <span class="skill-tag">Communication</span>
+                            <span class="skill-tag">Teamwork</span>
+                            <span class="skill-tag">Adaptability</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Projects & Experience</h2>
+                <div class="projects-list">
+                    <!-- Internship Project with GitHub Link -->
+                    <div class="project-card">
+                        <h3>AI-Based System Behaviour Analytics</h3>
+                        <span class="project-meta">Industrial Internship at LITZ Tech, Coimbatore (May 2025)</span>
+                        <dl class="project-details">
+                            <dt>Problem</dt>
+                            <dd>Monitoring and evaluating dynamic system performance data to identify anomalies and trends effectively.</dd>
+                            <dt>What I Built</dt>
+                            <dd>Developed a system performance monitoring pipeline using Python and predictive analysis techniques.</dd>
+                            <dt>Tools Used</dt>
+                            <dd>Python, Scikit-learn, Machine Learning techniques</dd>
+                            <dt>My Role</dt>
+                            <dd>Trainee / Developer handling data preprocessing, feature analysis, and forecasting.</dd>
+                        </dl>
+                        <a href="https://github.com/indhira-9" target="_blank" rel="noopener noreferrer" class="project-link">View GitHub Repository →</a>
+                    </div>
+
+                    <!-- Crop Prediction Project (No redirect link) -->
+                    <div class="project-card">
+                        <h3>Crop Yield Monitoring & Pesticide Analysis System</h3>
+                        <span class="project-meta">Research & Prototype Development (NGISCT 2024)</span>
+                        <dl class="project-details">
+                            <dt>Problem</dt>
+                            <dd>Evaluating agricultural domain parameters to optimize crop yields and manage pesticides efficiently.</dd>
+                            <dt>What I Built</dt>
+                            <dd>Created an analytical workflow focused on agricultural data interpretation and monitoring.</dd>
+                            <dt>Tools Used</dt>
+                            <dd>Python, Data Interpretation Techniques</dd>
+                            <dt>My Role</dt>
+                            <dd>Researcher and Developer</dd>
+                        </dl>
+                    </div>
+
+                    <!-- AI Public Health Chatbot (No redirect link) -->
+                    <div class="project-card">
+                        <h3>AI-Driven Public Health Chatbot</h3>
+                        <span class="project-meta">Smart India Hackathon 2025</span>
+                        <dl class="project-details">
+                            <dt>Problem</dt>
+                            <dd>Addressing public health information accessibility gaps through an automated interactive interface.</dd>
+                            <dt>What I Built</dt>
+                            <dd>Designed and presented an AI-driven prototype aimed at intelligent health inquiry resolution.</dd>
+                            <dt>Tools Used</dt>
+                            <dd>Python, Natural Language Basics, Prototyping Tools</dd>
+                            <dt>My Role</dt>
+                            <dd>Team Contributor and Presenter</dd>
+                        </dl>
+                    </div>
+
+                    <!-- Fitness Prototype (No redirect link) -->
+                    <div class="project-card">
+                        <h3>Fitness and Sports Prototype</h3>
+                        <span class="project-meta">Smart Hackathon 2024</span>
+                        <dl class="project-details">
+                            <dt>Problem</dt>
+                            <dd>Tracking athletic performance data to enhance sports training methods.</dd>
+                            <dt>What I Built</dt>
+                            <dd>Built a prototype concept tailored for sports performance evaluation.</dd>
+                            <dt>Tools Used</dt>
+                            <dd>Logical Reasoning, Analytical Tools</dd>
+                            <dt>My Role</dt>
+                            <dd>Project Presenter</dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2>Education & Certifications</h2>
+                <div class="edu-cert-grid">
+                    <div class="list-card">
+                        <h3>Education</h3>
+                        <ul>
+                            <li><strong>B.Sc. Artificial Intelligence and Machine Learning</strong><br>Dr. N.G.P. Arts and Science College, Coimbatore (CGPA: 8.58)</li>
+                            <li><strong>HSC II</strong><br>Akshaya Academy CBSE School (75.4%)</li>
+                            <li><strong>SSLC</strong><br>Akshaya Academy CBSE School (97%)</li>
+                        </ul>
+                    </div>
+                    <div class="list-card">
+                        <h3>Certifications & Workshops</h3>
+                        <ul>
+                            <li><strong>NPTEL</strong>: Introduction to Machine Learning (2025)</li>
+                            <li><strong>Great Learning</strong>: AI Fundamentals & C for Beginners (2025)</li>
+                            <li><strong>Infosys Springboard</strong>: Ethical AI (2024), Introduction to Machine Learning (2025)</li>
+                            <li><strong>ICCICT-2K26</strong>: Pre-Conference Workshop on AI Toolbox</li>
+                            <li><strong>Dakshina Bharat Hindi Prachar Sabha</strong>: Completed all 8 Hindi proficiency examinations</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="achievements">
+                <h2>Achievements & Publications</h2>
+                <div class="list-card" style="margin-bottom: 1.5rem;">
+                    <h3>Academic & Extracurricular Awards</h3>
+                    <ul>
+                        <li><strong>Proficiency Award (2025 & 2026)</strong>: Academic excellence in B.Sc. AI & ML, Dr. N.G.P. Arts and Science College.</li>
+                        <li><strong>First Place</strong>: Mathematics Quiz, National Mathematics Day (Dec 2025).</li>
+                        <li><strong>First Place</strong>: Mathematics Quiz, MathBlazers 2k26 (Sept 2026).</li>
+                        <li><strong>Third Place</strong>: Tamil Poetry Competition, NGPFEST’24.</li>
+                    </ul>
+                </div>
+                <div class="list-card">
+                    <h3>Papers Presented & Published</h3>
+                    <ul>
+                        <li><strong>IC-AISSTMH’26</strong>: Role of Generative AI in Indian Languages and Culture.</li>
+                        <li><strong>ICRTCSDA'25</strong>: Investigative use of AI tools.</li>
+                        <li><strong>NGISCT'24</strong>: Impact of Artificial Intelligence Techniques in Agriculture Domain for Crop Yield Monitoring and Pesticides (SRM National Conference).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Get in Touch</h2>
+                <div class="contact-card">
+                    <p>I am open to professional opportunities, internships, and collaborations. Feel free to reach out directly through any of the channels below:</p>
+                    <div class="contact-links">
+                        <a href="mailto:indhiramuthuswamy9@gmail.com" class="contact-item">
+                            📧 indhiramuthuswamy9@gmail.com
+                        </a>
+                        <a href="tel:+919994403716" class="contact-item">
+                            📱 +91 9994403716
+                        </a>
+                        <a href="https://www.linkedin.com/in/indhira-m-9b33193a2" target="_blank" rel="noopener noreferrer" class="contact-item">
+                            💼 LinkedIn Profile
+                        </a>
+                        <a href="https://github.com/indhira-9" target="_blank" rel="noopener noreferrer" class="contact-item">
+                            💻 GitHub (`indhira-9`)
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Indhira M. Built with semantic HTML & CSS.</p>
+        </footer>
+    </div>
+
+    <script>
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', savedTheme);
+        themeToggleBtn.textContent = savedTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeToggleBtn.textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+        });
+    </script>
+</body>
+</html>
